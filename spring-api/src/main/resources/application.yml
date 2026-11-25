@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: nexflow-spring-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nexflow
+    username: nexflow
+    password: nexflow_pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_batch_fetch_size: 50
+
+server:
+  port: 8080
+
+aws:
+  region: us-east-1
+  s3:
+    bucket-name: nexflow-data
+  sqs:
+    pipeline-events-url: https://sqs.us-east-1.amazonaws.com/000000000/nexflow-events.fifo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+logging:
+  level:
+    com.nexflow: DEBUG
+    org.springframework: INFO

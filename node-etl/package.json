@@ -1,0 +1,25 @@
+{
+  "name": "nexflow-etl",
+  "version": "1.0.0",
+  "description": "ETL Pipeline Service - Hexagonal Architecture + Functional Programming",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.400.0",
+    "@aws-sdk/client-sqs": "^3.400.0",
+    "pg": "^8.11.0",
+    "csv-parse": "^5.5.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

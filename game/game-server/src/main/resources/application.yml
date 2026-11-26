@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: nexquest-game-server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nexquest
+    username: nexquest
+    password: nexquest_pass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+server:
+  port: 8081
+
+game:
+  engine:
+    tick-rate: 20
+    max-players: 1000
+  evaluation:
+    timeout-ms: 5000
+    max-code-length: 10000
+  leaderboard:
+    update-interval-ms: 5000
+    top-entries: 100
+
+logging:
+  level:
+    com.nexflow.game: DEBUG

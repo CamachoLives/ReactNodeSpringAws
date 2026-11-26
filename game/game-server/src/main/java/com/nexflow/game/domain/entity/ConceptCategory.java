@@ -1,0 +1,14 @@
+package com.nexflow.game.domain.entity;
+
+public enum ConceptCategory {
+    SOLID_PRINCIPLES,
+    DESIGN_PATTERNS,
+    CONCURRENCY,
+    FUNCTIONAL_PROGRAMMING,
+    DATA_STRUCTURES,
+    ALGORITHMS,
+    CLEAN_ARCHITECTURE,
+    ETL_PIPELINES,
+    AWS_CLOUD,
+    REACTIVE_PROGRAMMING
+}
